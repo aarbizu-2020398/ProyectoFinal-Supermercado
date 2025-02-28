@@ -4,8 +4,12 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import { dbConnection } from './mongo.js';
+import { dbConnection } from '../configs/mongo.js';
 import limiter from '../src/middlewares/validar-cant-peticiones.js';
+
+
+import productoRutas from '../src/productos/productos.routes.js';
+
 
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
@@ -16,32 +20,31 @@ const middlewares = (app) => {
     app.use(limiter);
 }
 
-const routes = (app) =>{
-
+const routes = (app) => {
+    app.use('/api/productos', productoRutas); 
+    
 }
 
 const conectarDB = async () => {
-    try{
+    try {
         await dbConnection();
-        console.log("Conexion a la base de datos exitosa");
-    }catch(error){
-        console.error('Error Conectando a la base de datos', error);
+        console.log(" Conexión a la base de datos exitosa");
+    } catch (error) {
+        console.error(" Error conectando a la base de datos", error);
         process.exit(1);
     }
 }
 
-export const initServer = async () =>{
+export const initServer = async () => {
     const app = express();
-    const port = process.env.PORT || 3000;
+    const port = process.env.PORT || 3045;
 
     try {
         middlewares(app);
-        conectarDB();
+        await conectarDB(); 
         routes(app);
-        app.listen(port);
-        console.log(`Server running on port:  ${port}`)
-
+        app.listen(port, () => console.log(` Servidor corriendo en el puerto: ${port}`));
     } catch (err) {
-        console.log(`Server init fail : ${err}`)
+        console.error(` Error iniciando el servidor: ${err}`);
     }
-}
+};
