@@ -40,7 +40,7 @@ export const login = async (req, res) => {
             return res.status(400).json({ success: false, message: "Correo o contraseña incorrectos" });
         }
 
-        // Generar el token
+
         const token = jwt.sign({ id: usuario.id, rol: usuario.rol }, process.env.JWT_SECRET, { expiresIn: "15d" });
 
         res.json({ success: true, token, message: "Inicio de sesión exitoso" });
