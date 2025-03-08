@@ -1,50 +1,61 @@
-'use strict';
-
+// Ejemplo de fragmento de src/configs/server.js
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import { dbConnection } from '../configs/mongo.js';
-import limiter from '../src/middlewares/validar-cant-peticiones.js';
+import { dbConnection } from './mongo.js'; // Se importa como dbConnection
+import { limitador } from '../src/middlewares/validar-cant-peticiones.js';
 
+import authRoutes from '../src/auth/auth.routes.js';
+import productosRoutes from '../src/Productos/productos.routes.js';
+import categoryRoutes from '../src/Category/category.routes.js';
+import facturaRoutes from '../src/Factura/factura.routes.js';
+import carritoRoutes from '../src/Carrito/carrito.routes.js';
+import compraRoutes from '../src/Compra/compra.routes.js';
+import usuariosRoutes from '../src/User/user.routes.js';
 
-import productoRutas from '../src/productos/productos.routes.js';
+const configurarMiddlewares = (aplicacion) => {
+  aplicacion.use(express.urlencoded({ extended: false }));
+  aplicacion.use(cors());
+  aplicacion.use(express.json());
+  aplicacion.use(helmet());
+  aplicacion.use(morgan('dev'));
+  aplicacion.use(limitador);
+};
 
+const configurarRutas = (aplicacion) => {
+  aplicacion.use('/api/auth', authRoutes);
+  aplicacion.use('/api/users', usuariosRoutes);
+  aplicacion.use('/api/productos', productosRoutes);
+  aplicacion.use('/api/categorias', categoryRoutes);
+  aplicacion.use('/api/facturas', facturaRoutes);
+  aplicacion.use('/api/carrito', carritoRoutes);
+  aplicacion.use('/api/compra', compraRoutes);
+};
 
-const middlewares = (app) => {
-    app.use(express.urlencoded({ extended: false }));
-    app.use(cors());
-    app.use(express.json());
-    app.use(helmet());
-    app.use(morgan('dev'));
-    app.use(limiter);
-}
+const conectarBaseDatos = async () => {
+  try {
+    // Llamamos a la función importada dbConnection
+    await dbConnection();
+    console.log('Conexión a la base de datos exitosa');
+  } catch (error) {
+    console.error('Error conectando a la base de datos', error);
+    process.exit(1);
+  }
+};
 
-const routes = (app) => {
-    app.use('/api/productos', productoRutas); 
-    
-}
+export const iniciarServidor = async () => {
+  const aplicacion = express();
+  const puerto = process.env.PORT || 3055;
 
-const conectarDB = async () => {
-    try {
-        await dbConnection();
-        console.log(" Conexión a la base de datos exitosa");
-    } catch (error) {
-        console.error(" Error conectando a la base de datos", error);
-        process.exit(1);
-    }
-}
-
-export const initServer = async () => {
-    const app = express();
-    const port = process.env.PORT || 3045;
-
-    try {
-        middlewares(app);
-        await conectarDB(); 
-        routes(app);
-        app.listen(port, () => console.log(` Servidor corriendo en el puerto: ${port}`));
-    } catch (err) {
-        console.error(` Error iniciando el servidor: ${err}`);
-    }
+  try {
+    configurarMiddlewares(aplicacion);
+    await conectarBaseDatos();
+    configurarRutas(aplicacion);
+    aplicacion.listen(puerto, () =>
+      console.log(`Servidor corriendo en el puerto: ${puerto}`)
+    );
+  } catch (err) {
+    console.error(`Error iniciando el servidor: ${err}`);
+  }
 };
