@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "67d2051a07589577a97537e1"
+  },
+  "nombre": "Roberto Gomes",
+  "email": "roberto@example.com",
+  "contraseña": "$2a$10$hIEivUeCyTOLIIN0hadf1Oo5gZ/gOHNDS/fWZwWhgL/8zMU/8uTx6",
+  "rol": "ADMIN",
+  "fechaCreacion": {
+    "$date": "2025-03-12T22:05:14.981Z"
+  },
+  "__v": 0
+}]

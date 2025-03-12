@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "b2a93dd5-0c8e-4650-a637-14711dfe6174",
+		"name": "Realizar Compra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42124475"
+	},
+	"item": [
+		{
+			"name": "Realizar Compra",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/compra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"compra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Historial de Compras",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3055/api/compra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"compra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Compra por Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3055/api/compra/67d1232ce6e6f9b1889bf7b0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"compra",
+						"67d1232ce6e6f9b1889bf7b0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar compra",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"total\": 6000\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/compra/67d1232ce6e6f9b1889bf7b0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"compra",
+						"67d1232ce6e6f9b1889bf7b0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Compra",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3055/api/compra/67d12575e6e6f9b1889bf803",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"compra",
+						"67d12575e6e6f9b1889bf803"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

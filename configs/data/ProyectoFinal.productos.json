@@ -1,0 +1,78 @@
+[{
+  "_id": {
+    "$oid": "67d0ec344ef77fb33567f809"
+  },
+  "nombre": "Smartphone Xr",
+  "descripcion": "Smartphone de alta gama con excelentes prestaciones",
+  "precio": 500,
+  "stock": 20,
+  "categoria": {
+    "$oid": "67d0e53379b5cbee16a3ef84"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d0ec354ef77fb33567f80c"
+  },
+  "nombre": "Smartphone Xr",
+  "descripcion": "Smartphone de alta gama con excelentes prestaciones",
+  "precio": 500,
+  "stock": 0,
+  "categoria": {
+    "$oid": "67d0e53379b5cbee16a3ef84"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d0f87702c23cf1b6759085"
+  },
+  "nombre": "Smartphone Xr",
+  "descripcion": "Smartphone de alta gama con excelentes prestaciones",
+  "precio": 500,
+  "stock": 20,
+  "categoria": {
+    "$oid": "67d0e53379b5cbee16a3ef84"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d12531e6e6f9b1889bf7df"
+  },
+  "nombre": "Smartphone Xr",
+  "descripcion": "Smartphone de alta gama con excelentes prestaciones",
+  "precio": 500,
+  "stock": 1,
+  "categoria": {
+    "$oid": "67d0e53379b5cbee16a3ef84"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d1fdfc0c92c8bfd75dfcff"
+  },
+  "nombre": "Smartphone Xr",
+  "descripcion": "Smartphone de alta gama con excelentes prestaciones",
+  "precio": 500,
+  "stock": 20,
+  "categoria": {
+    "$oid": "67d0e53379b5cbee16a3ef84"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d1fe040c92c8bfd75dfd02"
+  },
+  "nombre": "Smartphone Xr",
+  "descripcion": "Smartphone de alta gama con excelentes prestaciones",
+  "precio": 500,
+  "stock": 20,
+  "categoria": {
+    "$oid": "67d0e53379b5cbee16a3ef84"
+  },
+  "__v": 0
+}]

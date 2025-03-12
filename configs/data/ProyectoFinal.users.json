@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "67d0ea004ef77fb33567f7f9"
+  },
+  "nombre": "Roberto Gomes",
+  "email": "roberto@example.com",
+  "contraseña": "$2a$10$y9DTPviohvVc2mgMAyXb7.oOzthzRpU/H0CKKL/Elko5Y2sqysAaq",
+  "rol": "ADMIN",
+  "fechaCreacion": {
+    "$date": "2025-03-12T01:57:20.460Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d1facf5bbd3c52d5fbed30"
+  },
+  "nombre": "Juan Pérez",
+  "email": "juan@example.com",
+  "contraseña": "$2a$10$wWKzyg8rdCys0F9bk9SUC.dyZYDn4vMMDN/nLG2/RXbQKIA45NKbq",
+  "rol": "CLIENT",
+  "fechaCreacion": {
+    "$date": "2025-03-12T21:21:19.045Z"
+  },
+  "__v": 0
+}]

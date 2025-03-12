@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "042475b0-c3c4-4756-bfef-5ff829aada8a",
+		"name": "Categoría",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42124475"
+	},
+	"item": [
+		{
+			"name": "Agregar Categoria",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Tecnologia\",\r\n  \"descripcion\": \"Productos electrónicos y tecnologicos\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Categoria",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Categoría",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Electrónica Actualizada\",\r\n  \"descripcion\": \"Todo tipo de productos electrónicos y gadgets\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/categorias/67d0e21c2c5096488ea52bd9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"categorias",
+						"67d0e21c2c5096488ea52bd9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Categoría",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/categorias/67d0eb8f4ef77fb33567f7fd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"categorias",
+						"67d0eb8f4ef77fb33567f7fd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

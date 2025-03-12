@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "8792f6b3-da6b-4a18-afb4-32b5b6d719de",
+		"name": "Carrito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42124475"
+	},
+	"item": [
+		{
+			"name": "Obtener Carrito",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/carrito",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"carrito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Producto al Carrito",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productoId\": \"67d12531e6e6f9b1889bf7df\",\r\n  \"cantidad\": 4\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/carrito",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"carrito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Producto del Carrito",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productoId\": \"67d12531e6e6f9b1889bf7df\",\r\n  \"cantidad\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/carrito",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"carrito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Producto del Carrito",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/carrito/67d0ec354ef77fb33567f80c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"carrito",
+						"67d0ec354ef77fb33567f80c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

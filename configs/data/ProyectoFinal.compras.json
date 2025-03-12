@@ -1,0 +1,125 @@
+[{
+  "_id": {
+    "$oid": "67d1232ce6e6f9b1889bf7b0"
+  },
+  "usuario": {
+    "$oid": "67d0ea004ef77fb33567f7f9"
+  },
+  "items": [
+    {
+      "producto": {
+        "$oid": "67d0ec354ef77fb33567f80c"
+      },
+      "cantidad": 1,
+      "precio": 500,
+      "_id": {
+        "$oid": "67d1232ce6e6f9b1889bf7b1"
+      }
+    }
+  ],
+  "total": 6000,
+  "fecha": {
+    "$date": "2025-03-12T06:01:16.022Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d201f1c93d1e0f4951ad8e"
+  },
+  "usuario": {
+    "$oid": "67d0ea004ef77fb33567f7f9"
+  },
+  "items": [
+    {
+      "producto": {
+        "$oid": "67d12531e6e6f9b1889bf7df"
+      },
+      "cantidad": 1,
+      "precio": 500,
+      "_id": {
+        "$oid": "67d201f1c93d1e0f4951ad8f"
+      }
+    }
+  ],
+  "total": 500,
+  "fecha": {
+    "$date": "2025-03-12T21:51:45.864Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d2054307589577a97537f6"
+  },
+  "usuario": {
+    "$oid": "67d0ea004ef77fb33567f7f9"
+  },
+  "items": [
+    {
+      "producto": {
+        "$oid": "67d12531e6e6f9b1889bf7df"
+      },
+      "cantidad": 10,
+      "precio": 500,
+      "_id": {
+        "$oid": "67d2054307589577a97537f7"
+      }
+    }
+  ],
+  "total": 5000,
+  "fecha": {
+    "$date": "2025-03-12T22:05:55.571Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d212e445965766905b62ad"
+  },
+  "usuario": {
+    "$oid": "67d0ea004ef77fb33567f7f9"
+  },
+  "items": [
+    {
+      "producto": {
+        "$oid": "67d12531e6e6f9b1889bf7df"
+      },
+      "cantidad": 3,
+      "precio": 500,
+      "_id": {
+        "$oid": "67d212e445965766905b62ae"
+      }
+    }
+  ],
+  "total": 1500,
+  "fecha": {
+    "$date": "2025-03-12T23:04:04.377Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d21767ebe76ef28d8bd750"
+  },
+  "usuario": {
+    "$oid": "67d0ea004ef77fb33567f7f9"
+  },
+  "items": [
+    {
+      "producto": {
+        "$oid": "67d12531e6e6f9b1889bf7df"
+      },
+      "cantidad": 4,
+      "precio": 500,
+      "_id": {
+        "$oid": "67d21767ebe76ef28d8bd751"
+      }
+    }
+  ],
+  "total": 2000,
+  "fecha": {
+    "$date": "2025-03-12T23:23:19.330Z"
+  },
+  "__v": 0
+}]

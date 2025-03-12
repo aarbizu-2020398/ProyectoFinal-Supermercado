@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "67d0e21c2c5096488ea52bd9"
+  },
+  "nombre": "Electrónica Actualizada",
+  "descripcion": "Todo tipo de productos electrónicos y gadgets",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d0e53379b5cbee16a3ef84"
+  },
+  "nombre": "Tecnologia",
+  "descripcion": "Productos electrónicos y tecnologicos",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d1082d1841d7ed9ec1c47c"
+  },
+  "nombre": "Tecnologia",
+  "descripcion": "Productos electrónicos y tecnologicos",
+  "__v": 0
+}]

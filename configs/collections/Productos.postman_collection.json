@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "efbaccce-5290-4f90-801e-b5ffe17a3ef9",
+		"name": "Productos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42124475"
+	},
+	"item": [
+		{
+			"name": "Crear Producto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Smartphone Xr\",\r\n  \"descripcion\": \"Smartphone de alta gama con excelentes prestaciones\",\r\n  \"precio\": 500,\r\n  \"stock\": 20,\r\n  \"categoria\": \"67d0e53379b5cbee16a3ef84\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Todos los Productos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Producto por ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/productos/67d0ec164ef77fb33567f806",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"productos",
+						"67d0ec164ef77fb33567f806"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Productos Agotados",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n  {\r\n    \"_id\": \"64acbf...\",\r\n    \"nombre\": \"Teclado Mecánico\",\r\n    \"stock\": 0\r\n  }\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/productos/agotados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"productos",
+						"agotados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Productos Más Vendidos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"_id\": \"64acbf...\",\r\n    \"nombre\": \"Laptop Gamer\",\r\n    \"ventas\": 50\r\n  },\r\n  {\r\n    \"_id\": \"64accf...\",\r\n    \"nombre\": \"Mouse Inalámbrico\",\r\n    \"ventas\": 30\r\n  }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/productos/mas-vendidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"productos",
+						"mas-vendidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Producto",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Tableta Xr\",\r\n  \"descripcion\": \"Smartphone de alta gama con excelentes prestaciones\",\r\n  \"precio\": 450,\r\n  \"stock\": 15,\r\n  \"categoria\": \"67d0e53379b5cbee16a3ef84\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/productos/67d0ec164ef77fb33567f806",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"productos",
+						"67d0ec164ef77fb33567f806"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Producto",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDBlYTAwNGVmNzdmYjMzNTY3ZjdmOSIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzQxNzQ0NjUwLCJleHAiOjE3NDMwNDA2NTB9.Y_IknLaajgj55WeIk30Dpa-Nqt3N4z5ulQn510s4e1M",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3055/api/productos/67d0ec164ef77fb33567f806",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"productos",
+						"67d0ec164ef77fb33567f806"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

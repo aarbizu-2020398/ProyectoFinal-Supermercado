@@ -1,7 +1,7 @@
+// index.js
 import { config } from 'dotenv';
-import { initServer } from './configs/server.js';
+config();  // Cargar variables de entorno
 
+import { iniciarServidor } from './configs/server.js';
 
-
-config();
-initServer();
+iniciarServidor();

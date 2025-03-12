@@ -1,0 +1,139 @@
+[{
+  "_id": {
+    "$oid": "67d12575e6e6f9b1889bf801"
+  },
+  "usuario": {
+    "$oid": "67d0ea004ef77fb33567f7f9"
+  },
+  "productos": [],
+  "total": 500,
+  "fechaEmision": {
+    "$date": "2025-03-12T06:11:01.087Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d201f1c93d1e0f4951ad8b"
+  },
+  "usuario": {
+    "$oid": "67d0ea004ef77fb33567f7f9"
+  },
+  "items": [
+    {
+      "producto": {
+        "$oid": "67d12531e6e6f9b1889bf7df"
+      },
+      "cantidad": 1,
+      "precio": 500,
+      "_id": {
+        "$oid": "67d201f1c93d1e0f4951ad8c"
+      }
+    }
+  ],
+  "total": 500,
+  "fechaEmision": {
+    "$date": "2025-03-12T21:51:45.867Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d2054307589577a97537f3"
+  },
+  "usuario": {
+    "$oid": "67d0ea004ef77fb33567f7f9"
+  },
+  "items": [
+    {
+      "producto": {
+        "$oid": "67d12531e6e6f9b1889bf7df"
+      },
+      "cantidad": 10,
+      "precio": 500,
+      "_id": {
+        "$oid": "67d2054307589577a97537f4"
+      }
+    }
+  ],
+  "total": 5000,
+  "fechaEmision": {
+    "$date": "2025-03-12T22:05:55.574Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d2054e07589577a97537fa"
+  },
+  "usuario": {
+    "$oid": "67d2051a07589577a97537e1"
+  },
+  "items": [
+    {
+      "producto": {
+        "$oid": "67d0ec344ef77fb33567f809"
+      },
+      "cantidad": 2,
+      "precio": 999,
+      "_id": {
+        "$oid": "67d2054e07589577a97537fb"
+      }
+    }
+  ],
+  "total": 1998,
+  "fechaEmision": {
+    "$date": "2025-03-12T22:06:06.705Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d212e445965766905b62aa"
+  },
+  "usuario": {
+    "$oid": "67d0ea004ef77fb33567f7f9"
+  },
+  "items": [
+    {
+      "producto": {
+        "$oid": "67d12531e6e6f9b1889bf7df"
+      },
+      "cantidad": 3,
+      "precio": 500,
+      "_id": {
+        "$oid": "67d212e445965766905b62ab"
+      }
+    }
+  ],
+  "total": 1500,
+  "fechaEmision": {
+    "$date": "2025-03-12T23:04:04.378Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d21767ebe76ef28d8bd74d"
+  },
+  "usuario": {
+    "$oid": "67d0ea004ef77fb33567f7f9"
+  },
+  "items": [
+    {
+      "producto": {
+        "$oid": "67d12531e6e6f9b1889bf7df"
+      },
+      "cantidad": 4,
+      "precio": 500,
+      "_id": {
+        "$oid": "67d21767ebe76ef28d8bd74e"
+      }
+    }
+  ],
+  "total": 2000,
+  "fechaEmision": {
+    "$date": "2025-03-12T23:23:19.332Z"
+  },
+  "__v": 0
+}]
