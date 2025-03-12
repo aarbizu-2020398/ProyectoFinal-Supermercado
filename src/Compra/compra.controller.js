@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import mongoose from 'mongoose';
@@ -17,13 +18,27 @@ export const realizarCompra = async (req, res) => {
     const idUsuario = new mongoose.Types.ObjectId(idUsuarioString);
 
    
+=======
+import Carrito from '../Carrito/carrito.model.js';
+import Producto from '../Productos/productos.model.js';
+import Factura from '../Factura/factura.model.js'; // Asegúrate de tener este modelo
+
+export const realizarCompra = async (req, res) => {
+  try {
+    const idUsuario = req.user._id;
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
     const carrito = await Carrito.findOne({ usuario: idUsuario }).populate('items.producto');
     if (!carrito || carrito.items.length === 0) {
       return res.status(400).json({ error: 'El carrito está vacío' });
     }
+<<<<<<< HEAD
 
     let total = 0;
 
+=======
+    
+    let total = 0;
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
     for (const item of carrito.items) {
       const producto = item.producto;
       if (producto.stock < item.cantidad) {
@@ -31,15 +46,27 @@ export const realizarCompra = async (req, res) => {
       }
       total += producto.precio * item.cantidad;
     }
+<<<<<<< HEAD
 
+=======
+    
+    // Reducir el stock de cada producto
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
     for (const item of carrito.items) {
       const producto = item.producto;
       producto.stock -= item.cantidad;
       await producto.save();
     }
+<<<<<<< HEAD
 
     const datosCompra = {
       usuario: idUsuario, 
+=======
+    
+    // Crear factura con la compra
+    const datosFactura = {
+      usuario: idUsuario,
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
       items: carrito.items.map(item => ({
         producto: item.producto._id,
         cantidad: item.cantidad,
@@ -48,6 +75,7 @@ export const realizarCompra = async (req, res) => {
       total,
       fecha: new Date()
     };
+<<<<<<< HEAD
 
 
     const factura = await Factura.create(datosCompra);
@@ -113,5 +141,17 @@ export const eliminarCompra = async (req, res) => {
   } catch (error) {
     console.error('Error al eliminar la compra:', error);
     res.status(500).json({ error: 'Error al eliminar la compra', error });
+=======
+    
+    const factura = await Factura.create(datosFactura);
+    
+    // Vaciar el carrito
+    carrito.items = [];
+    await carrito.save();
+    
+    res.json({ mensaje: 'Compra realizada exitosamente', factura });
+  } catch (error) {
+    res.status(500).json({ error: 'Error en el proceso de compra' });
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
   }
 };

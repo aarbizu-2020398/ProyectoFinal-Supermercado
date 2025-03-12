@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import Factura from './factura.model.js';
 import ExcelJS from 'exceljs';
@@ -29,10 +30,20 @@ export const crearFactura = async (req, res) => {
     });
   } catch (error) {
     console.error('Error al crear factura:', error);
+=======
+import Factura from './factura.model.js';
+
+export const crearFactura = async (req, res) => {
+  try {
+    // Lógica para crear la factura (a implementar)
+    res.status(201).json({ message: 'Factura creada exitosamente' });
+  } catch (error) {
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
     res.status(500).json({ message: 'Error al crear la factura', error });
   }
 };
 
+<<<<<<< HEAD
 
 export const obtenerFacturas = async (req, res) => {
   try {
@@ -42,10 +53,18 @@ export const obtenerFacturas = async (req, res) => {
     res.status(200).json(facturas);
   } catch (error) {
     console.error('Error al obtener facturas:', error);
+=======
+export const obtenerFacturas = async (req, res) => {
+  try {
+    // Lógica para obtener facturas (a implementar)
+    res.status(200).json({ message: 'Facturas obtenidas exitosamente' });
+  } catch (error) {
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
     res.status(500).json({ message: 'Error al obtener las facturas', error });
   }
 };
 
+<<<<<<< HEAD
 
 export const obtenerFacturaPorId = async (req, res) => {
   try {
@@ -59,10 +78,18 @@ export const obtenerFacturaPorId = async (req, res) => {
     res.status(200).json(factura);
   } catch (error) {
     console.error('Error al obtener la factura:', error);
+=======
+export const obtenerFacturaPorId = async (req, res) => {
+  try {
+    // Lógica para obtener una factura por su ID (a implementar)
+    res.status(200).json({ message: 'Factura obtenida exitosamente' });
+  } catch (error) {
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
     res.status(500).json({ message: 'Error al obtener la factura', error });
   }
 };
 
+<<<<<<< HEAD
 
 export const editarFactura = async (req, res) => {
   try {
@@ -148,5 +175,14 @@ export const exportarFactura = async (req, res) => {
   } catch (error) {
     console.error('Error exportando la factura:', error);
     res.status(500).json({ message: 'Error exportando la factura', error });
+=======
+export const obtenerHistorialDeCompras = async (req, res) => {
+  try {
+    const idUsuario = req.user._id;
+    const facturas = await Factura.find({ usuarioId: idUsuario });
+    res.json(facturas);
+  } catch (error) {
+    res.status(500).json({ error: 'Error obteniendo el historial de compras', error });
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
   }
 };

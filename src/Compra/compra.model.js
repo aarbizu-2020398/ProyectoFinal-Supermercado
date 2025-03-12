@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
 import mongoose from 'mongoose';
 
 const itemCompraSchema = new mongoose.Schema({
@@ -19,7 +22,11 @@ const itemCompraSchema = new mongoose.Schema({
 });
 
 const CompraSchema = new mongoose.Schema({
+<<<<<<< HEAD
   usuario: { 
+=======
+  usuario: {
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Usuario',
     required: true

@@ -20,7 +20,11 @@ const productoSchema = new mongoose.Schema({
   },
   categoria: {
     type: mongoose.Schema.Types.ObjectId,
+<<<<<<< HEAD
     ref: 'Category',
+=======
+    ref: 'Categoria',
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
     required: true
   },
   imagen: {

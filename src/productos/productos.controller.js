@@ -22,16 +22,25 @@ const productoControlador = {
 
     obtenerProductos: async (req, res) => {
         try {
+<<<<<<< HEAD
 
             const productos = await Producto.find();
             res.json(productos);
         } catch (error) {
             console.error('Error al obtener productos:', error);
+=======
+            const productos = await Producto.find().populate('categoria', 'nombre');
+            res.json(productos);
+        } catch (error) {
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
             res.status(500).json({ mensaje: "Error al obtener productos", error });
         }
     },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
     obtenerProductoPorId: async (req, res) => {
         try {
             const producto = await Producto.findById(req.params.id).populate('categoria', 'nombre');

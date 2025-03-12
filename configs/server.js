@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 
+=======
+// Ejemplo de fragmento de src/configs/server.js
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
+<<<<<<< HEAD
 import { dbConnection } from './mongo.js';
+=======
+import { dbConnection } from './mongo.js'; // Se importa como dbConnection
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
 import { limitador } from '../src/middlewares/validar-cant-peticiones.js';
 
 import authRoutes from '../src/auth/auth.routes.js';
@@ -24,7 +32,10 @@ const configurarMiddlewares = (aplicacion) => {
 };
 
 const configurarRutas = (aplicacion) => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
   aplicacion.use('/api/auth', authRoutes);
   aplicacion.use('/api/users', usuariosRoutes);
   aplicacion.use('/api/productos', productosRoutes);
@@ -36,6 +47,10 @@ const configurarRutas = (aplicacion) => {
 
 const conectarBaseDatos = async () => {
   try {
+<<<<<<< HEAD
+=======
+    // Llamamos a la función importada dbConnection
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
     await dbConnection();
     console.log('Conexión a la base de datos exitosa');
   } catch (error) {

@@ -37,9 +37,29 @@ export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
+<<<<<<< HEAD
     const usuario = await Usuario.findOne({ email });
     if (!usuario) {
       return res.status(400).json({ success: false, message: 'Correo o contraseña incorrectos' });
+=======
+        const usuario = users.find((user) => user.email === email);
+        if (!usuario) {
+            return res.status(400).json({ success: false, message: "Correo o contraseña incorrectos" });
+        }
+
+        const passwordValido = await bcrypt.compare(password, usuario.password);
+        if (!passwordValido) {
+            return res.status(400).json({ success: false, message: "Correo o contraseña incorrectos" });
+        }
+
+
+        const token = jwt.sign({ id: usuario.id, rol: usuario.rol }, process.env.JWT_SECRET, { expiresIn: "15d" });
+
+        res.json({ success: true, token, message: "Inicio de sesión exitoso" });
+    } catch (error) {
+        console.error("Error al iniciar sesión:", error);
+        res.status(500).json({ success: false, message: "Error interno del servidor" });
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
     }
 
 

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+// middlewares/validar-roles.js
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
 const validarAdminRole = (req, res, next) => {
 
     if (!req.user) {

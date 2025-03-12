@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import mongoose from 'mongoose';
 
@@ -24,6 +25,21 @@ const facturaSchema = new mongoose.Schema({
     required: true
   },
   items: [itemFacturaSchema],
+=======
+import mongoose from 'mongoose';
+
+const facturaSchema = new mongoose.Schema({
+  usuarioId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  productos: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Product',
+    required: true
+  }],
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
   total: {
     type: Number,
     required: true
@@ -35,4 +51,8 @@ const facturaSchema = new mongoose.Schema({
 });
 
 const Factura = mongoose.model('Factura', facturaSchema);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6cbb8ab0144e1222b846c9c67f40a8ac072458ad
 export default Factura;
